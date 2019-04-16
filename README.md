@@ -1,4 +1,4 @@
-## Projet THP
+## Projet THP Semaine 3 Jour 2 : let's GO OOP
 
 Projet made with Love by Alexandre Labonne (@Lab's) et Brice Jones (@brice)
 
