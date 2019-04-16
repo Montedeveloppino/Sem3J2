@@ -4,7 +4,6 @@ Bundler.require
 require_relative 'lib/game'
 require_relative 'lib/player'
 
-require 'pry'
 
 puts "-------------------------------------------------"
 puts "|Bienvenue sur 'ILS VEULENT TOUS MA POO' !      |"
@@ -24,5 +23,3 @@ while my_game.is_still_ongoing?
 	my_game.show_players
 end
 my_game.end
-
-binding.pry

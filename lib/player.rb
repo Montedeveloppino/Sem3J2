@@ -64,7 +64,6 @@ class HumanPlayer < Player
 
   def search_health_pack
     pv = rand(1..6)
-    puts pv
     if pv == 1
       puts "Tu n'as rien trouvé... " 
     end
