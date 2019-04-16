@@ -22,7 +22,11 @@ class Game
     @enemies.each do |pv|
       total += pv.life_points
     end
-    return true if @human_player.life_points > 0 && total <= 0
+    if @human_player.life_points > 0 && total <= 0
+      return false
+    else
+      return true
+    end
     # qui retourne true si le jeu est toujours en cours et false sinon. 
     #Le jeu continue tant que le @human_player a encore des points de vie et qu'il reste des Player à combattre 
     #dans l’array @enemies
@@ -65,11 +69,14 @@ class Game
     if action == "s"
       @human_player.search_health_pack
     end
-    position = action.to_i
-    if @enemies[position].life_points > 0
-      @human_player.attacks(enemies[position])
-      kill_player
+    if action != "a" && action != "s"
+      position = action.to_i
+      if @enemies[position].life_points > 0
+        @human_player.attacks(enemies[position])
+        kill_player
+      end
     end
+    
   end
 
 
