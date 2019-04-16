@@ -3,8 +3,8 @@
 class Player
   attr_accessor :name, :life_points
 
-  def initialize(name_save)
-    @name = name_save
+  def initialize(player_name)
+    @name = player_name
     @life_points = 10
   end
 
@@ -21,9 +21,9 @@ class Player
 
   def attacks(player)
     puts "#{@name} attaque #{player.name} !"
-    degats = compute_damage
-    puts "Il lui inflige #{degats} points de degats."
-    player.gets_damage(degats)
+    damage = compute_damage
+    puts "Il lui inflige #{damage} points de degats."
+    player.gets_damage(damage)
   end
 
   def compute_damage
@@ -32,5 +32,19 @@ class Player
 
 end
 
+class HumanPlayer < Player
+  attr_accessor :weapon_level
 
+  def initialize(player_name)
+    @weapon_level = 1
+    
+    super
+    @life_points = 100
+
+  end
+
+  def show_state
+    puts "#{@name} a #{@life_points} points de vie et une arme de niveau #{@weapon_level}" 
+  end 
+end
 
