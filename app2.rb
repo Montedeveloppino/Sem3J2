@@ -22,14 +22,6 @@ def init_player
   return player_man
 end
 
-def init_enemies
-
-end
-
-def attack_menu
-
-end
-
 home
 human_being = init_player
 

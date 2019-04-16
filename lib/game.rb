@@ -5,6 +5,9 @@ class Game
   def initialize(human)
     @human_player = human
     @enemies = []
+
+    4.times do 
+    end 
   end
 
   def kill_player(killed)
