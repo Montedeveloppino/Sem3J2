@@ -37,7 +37,6 @@ human_being = init_player
 enemie1 = Player.new("Josiane")
 enemie2 = Player.new("José")
 enemies = [enemie1,enemie2]
-enemie_not_died = true
 
 while human_being.life_points>0 && (enemie1.life_points > 0 || enemie2.life_points >0)
   # affiche le status de joueur humain
@@ -80,6 +79,7 @@ while human_being.life_points>0 && (enemie1.life_points > 0 || enemie2.life_poin
 
   puts "----------------------------------"
   # ripostes des enemies
+  
   puts "Les autres joueurs t'attaquent !"
   enemies.each do | enemie |
     if enemie.life_points>0
