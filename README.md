@@ -10,6 +10,10 @@ Pour charger installer, faire un
 
  ```git clone git@github.com:notmoebius/Sem3J2.git```
 
+ ou télécharger un ZIP:
+
+ ```https://github.com/notmoebius/Sem3J2/archive/master.zip```
+
 ## pour lancer les programmes
 
 ### Version 1
