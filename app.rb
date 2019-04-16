@@ -1,25 +1,29 @@
-require 'pry'
 require 'bundler'
-
 Bundler.require
 
-require_relative 'lib/user'
-require_relative 'lib/event'
+require_relative 'lib/game'
+require_relative 'lib/player'
+
+player1 = Player.new("Mo Salah")
+player2 = Player.new("Sergio Ramos")
+
+while player1.life_points > 0 && player2.life_points > 0
+  puts "Voici l'état de nos joueurs :"
+	player1.show_state
+	player2.show_state
+	puts
+
+	puts "Passons à la phase d'attaque :"
+	player1.attacks(player2)
+		if player2.life_points <= 0
+			break
+		end
+	player2.attacks(player1)
+		if player1.life_points <= 0
+			break
+		end
+	puts
+end
 
 binding.pry
-
-julie = User.new('julie@julie.com',23)
-alec = User.new('alec@alec.com', 20)
-
-puts "Liste d'utilisateurs : "
-puts User.all
-
-#event1 = Event.new("2019-01-13 09:00", 10, "standup quotidien", [julie, alec]) # avec les objets user
-
-
-
-
-
-
-
 
