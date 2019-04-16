@@ -41,5 +41,7 @@ PS: avant de lancer ruby app.rb, penser à faire bundle install si nécessaire.
 
 PS2: pas de fonctionnalités bonus, next time !
 
+PS3: les tests pas implémentés..malgré notre intention.
+
 
 #
