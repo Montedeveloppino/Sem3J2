@@ -16,19 +16,19 @@ Pour charger installer, faire un
 dans le dossier par défaut, lancer :
 - ```ruby app.rb```
 
-Il est en mode automatique, c'est le bot qui joue pour 2 players
+Il est en mode automatique, c'est le bot qui joue pour **2 players**
 
 ### Version 2
 dans le dossier par défaut, lancer :
-- ``ruby app2.rb```
+- ```ruby app2.rb```
 
-Ici, un peu plus intéractif, c'est Man versus Wild. Tu affronteras deux ennemis avec le choix des armes et la possibilité d'avoir des points de vie supplémentaire (PV).
+Ici, un peu plus intéractif, c'est **Man versus Wild**. Tu affronteras deux ennemis avec le choix des armes et la possibilité d'avoir des points de vie supplémentaire (PV).
 
 ### Version 3
 dans le dossier par défaut, lancer :
 - ```ruby app3.rb```
 
-Là, tu joues contre 4 ennemis, plus fort, plus nombreux !! Penses à te recharger en point de vie pour faire face au nombre.
+Là, tu joues **contre 4 ennemis**, plus fort, plus nombreux !! Penses à te recharger en point de vie pour faire face au nombre.
 
 PS: avant de lancer ruby app.rb, penser à faire bundle install si nécessaire.
 
