@@ -18,14 +18,14 @@ class Game
   end
  
   def is_still_ongoing?
-    total = 0
-    @enemies.each do |pv|   # je fais la somme des PV des ennemies pour voi si ils sont à 0
-      total += pv.life_points
-    end
-    if @human_player.life_points > 0 && total <= 0
-      return false
-    else
+    #total = 0
+    #@enemies.each do |pv|   # je fais la somme des PV des ennemies pour voi si ils sont à 0
+    #  total += pv.life_points
+    #end
+    if @human_player.life_points > 0 && !@enemies.empty?
       return true
+    else
+      return false
     end
     # qui retourne true si le jeu est toujours en cours et false sinon. 
     #Le jeu continue tant que le @human_player a encore des points de vie et qu'il reste des Player à combattre 
@@ -65,19 +65,22 @@ class Game
     puts "----------------------------------"
     if action == "a"
       @human_player.search_weapon
-    end
-    if action == "s"
+    elsif action == "s"
       @human_player.search_health_pack
-    end
     # si le choix est différent de a ou s, alors je prends la position de l'ennemi à supprimer
-    if action != "a" && action != "s"
+    elsif action == "0" || action == "1" || action == "2" || action == "3"
       position = action.to_i
-      if @enemies[position].life_points > 0
-        @human_player.attacks(enemies[position])
-        kill_player
+      if position <= @enemies.count-1  # va chercher l'ennemie a enlever
+        if @enemies[position].life_points > 0
+          @human_player.attacks(enemies[position])
+          kill_player    #supprime l'ennemie qui a 0 PV
+        end
+      else
+        puts "Mauvais cheval, tant pis pour toi !"
       end
+    else
+      puts "Erreur de saisie: a ou s ou un chifre de 0 à 3..."
     end
-    
   end
 
 
