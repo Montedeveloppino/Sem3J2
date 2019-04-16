@@ -19,7 +19,7 @@ class Game
  
   def is_still_ongoing?
     total = 0
-    @enemies.each do |pv|
+    @enemies.each do |pv|   # je fais la somme des PV des ennemies pour voi si ils sont à 0
       total += pv.life_points
     end
     if @human_player.life_points > 0 && total <= 0
@@ -69,6 +69,7 @@ class Game
     if action == "s"
       @human_player.search_health_pack
     end
+    # si le choix est différent de a ou s, alors je prends la position de l'ennemi à supprimer
     if action != "a" && action != "s"
       position = action.to_i
       if @enemies[position].life_points > 0

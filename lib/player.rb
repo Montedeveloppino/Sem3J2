@@ -3,26 +3,28 @@
 class Player
   attr_accessor :name, :life_points
 
+  # initailisation de la classe avec pv et nom du joueur
   def initialize(player_name)
     @name = player_name
     @life_points = 10
   end
 
+  # Affiche l'état des joueurs
   def show_state
     puts "#{@name} a #{@life_points} points de vie"
   end 
 
   def gets_damage(damage)
-    @life_points -= damage
-    if @life_points <= 0
-      puts "#{@name} a été tué !"
+    @life_points -= damage    # inflige des dommages
+    if @life_points <= 0      # vérifie sur PV sont à 0
+      puts "#{@name} a été tué !"   # si PV = 0, j'informe
     end
   end
 
   def attacks(player)
-    puts "#{@name} attaque #{player.name} !"
+    puts "#{@name} attaque #{player.name} !"   # un joueur lance une attaque
     damage = compute_damage
-    puts "Il lui inflige #{damage} points de degats."
+    puts "Il lui inflige #{damage} points de degats." # calcul les dommages et affiche le résultat
     player.gets_damage(damage)
   end
 
@@ -32,7 +34,7 @@ class Player
 
 end
 
-class HumanPlayer < Player
+class HumanPlayer < Player    # héritage de la classe Player
   attr_accessor :weapon_level
 
   def initialize(player_name)

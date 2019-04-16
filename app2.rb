@@ -72,7 +72,9 @@ while human_being.life_points>0 && (enemie1.life_points > 0 || enemie2.life_poin
   puts "----------------------------------"
   # ripostes des enemies
   
-  puts "Les autres joueurs t'attaquent !"
+  if enemie2.life_points>0 && enemie1.life_points> 0
+     puts "Les autres joueurs t'attaquent !"
+  end
   enemies.each do | enemie |
     if enemie.life_points>0
       enemie.attacks(human_being)
@@ -90,5 +92,3 @@ else
   puts "Loser ! Tu as perdu !"
 end
 puts "**********************************"
-
-binding.pry
