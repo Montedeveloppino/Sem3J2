@@ -7,7 +7,7 @@ Développer un Mini jeu - il veulent tous ta POO
 
 ## Pré-requis
 Le repo est dispo [là](https://github.com/notmoebius/Sem3J2).
-Pour charger installer, faire un
+Pour installer, faire un
 
  ```git clone git@github.com:notmoebius/Sem3J2.git```
 
